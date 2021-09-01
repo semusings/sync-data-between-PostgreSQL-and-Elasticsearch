@@ -33,7 +33,7 @@ services:
   pgsync:
     image: pgsync:latest
     build:
-      context: ./cicd/docker/pgsync
+      context: ./docker/pgsync
       dockerfile: Dockerfile
     sysctls:
       - net.ipv4.tcp_keepalive_time=200

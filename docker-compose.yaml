@@ -7,7 +7,7 @@ services:
       POSTGRES_PASSWORD: postgres
     volumes:
       - ./docker/postgres:/docker-entrypoint-initdb.d
-      - ./build/docker/pgdata:/var/lib/postgresql/data
+#      - ./build/docker/pgdata:/var/lib/postgresql/data
     ports:
       - 5432:5432
     healthcheck:
@@ -22,8 +22,8 @@ services:
       - http.host=0.0.0.0
     ports:
       - 9200:9200
-    volumes:
-      - ./build/docker/esdata:/usr/share/elasticsearch/data
+#    volumes:
+#      - ./build/docker/esdata:/usr/share/elasticsearch/data
   redis:
     image: redis:alpine3.14
     command: redis-server --requirepass redis

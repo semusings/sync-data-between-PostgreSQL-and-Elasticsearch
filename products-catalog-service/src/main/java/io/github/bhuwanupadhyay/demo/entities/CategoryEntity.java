@@ -22,7 +22,7 @@ public class CategoryEntity implements Serializable {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "fk_product")
+    @JoinColumn(name = "product_id")
     private ProductEntity product;
 
     public Long getId() {

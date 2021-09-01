@@ -1,2 +1,2 @@
-# DEMO: How to Sync data between PostgreSQL and Elasticsearch?
+# How to Sync data between PostgreSQL and Elasticsearch?
 

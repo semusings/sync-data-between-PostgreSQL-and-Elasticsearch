@@ -1,0 +1,3 @@
+rootProject.name = 'sync-data-between-PostgreSQL-and-Elasticsearch'
+include('products-catalog-service')
+include('products-search-service')

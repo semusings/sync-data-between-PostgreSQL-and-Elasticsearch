@@ -1,0 +1,15 @@
+[
+  {
+    "database": "products_db",
+    "index": "products",
+    "nodes": {
+      "table": "products",
+      "columns": [
+        "product_id",
+        "product_name",
+        "product_description",
+        "created_at"
+      ]
+    }
+  }
+]

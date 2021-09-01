@@ -1,0 +1,10 @@
+[
+  {
+    "path": "/api/v1/products",
+    "target": "http://localhost:8081"
+  },
+  {
+    "path": "/api/search/products",
+    "target": "http://localhost:8082"
+  }
+]

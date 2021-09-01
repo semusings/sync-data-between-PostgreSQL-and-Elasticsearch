@@ -1,0 +1,57 @@
+version: "3.3"
+services:
+  postgres:
+    image: postgres:12.1-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./cicd/docker/postgres:/docker-entrypoint-initdb.d
+      - ./build/docker/pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    command: [ "postgres", "-c", "wal_level=logical" ]
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      start_period: 10s
+  elasticsearch:
+    image: elasticsearch:7.9.2
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - network.host=127.0.0.1
+      - http.host=0.0.0.0
+    ports:
+      - 9200:9200
+    volumes:
+      - ./build/docker/esdata:/usr/share/elasticsearch/data
+  redis:
+    image: redis:alpine3.14
+    command: redis-server --requirepass redis
+    ports:
+      - 6379:6379
+  pgsync:
+    image: pgsync:latest
+    build:
+      context: ./cicd/docker/pgsync
+      dockerfile: Dockerfile
+    sysctls:
+      - net.ipv4.tcp_keepalive_time=200
+      - net.ipv4.tcp_keepalive_intvl=200
+      - net.ipv4.tcp_keepalive_probes=5
+    links:
+      - postgres
+      - elasticsearch
+      - redis
+    environment:
+      PG_USER: postgres
+      PG_HOST: postgres
+      PG_PASSWORD: postgres
+      POSTGRES_PORT: 5432
+      LOG_LEVEL: INFO
+      ELASTICSEARCH_PORT: 9200
+      ELASTICSEARCH_SCHEME: http
+      ELASTICSEARCH_HOST: elasticsearch
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_AUTH: redis

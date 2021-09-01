@@ -7,3 +7,9 @@ infra: ## Launch
 
 proxy: ## Local Proxy
 	npm i express http-proxy-middleware && node proxy.js
+
+clean: ## Cleanup
+	docker-compose rm -f -s -v && \
+	rm -rf node_modules/ package-lock.json && \
+	sudo rm -rf build/ && \
+ 	./gradlew clean

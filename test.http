@@ -1,0 +1,40 @@
+### Create category
+POST http://localhost:8081/api/categories
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Category name",
+  "description": "Category description"
+}
+
+### Get categories
+GET http://localhost:8081/api/categories
+Accept: application/json
+
+
+### Create product
+POST http://localhost:8081/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Product name",
+  "description": "Product description"
+}
+
+> {% client.global.set("categories_link", response.body._links.categories.href); %}
+
+
+### Add category on product
+POST http://localhost:8081/api/products/5/categories
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 1
+}
+
+### Get products
+GET http://localhost:8081/api/products
+Accept: application/json

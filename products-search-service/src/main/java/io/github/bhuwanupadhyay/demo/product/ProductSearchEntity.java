@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -14,10 +15,13 @@ import java.util.Objects;
 public class ProductSearchEntity extends Auditable<String> implements Serializable {
 
     @Id
+    @Field(name = "product_id")
     private Long id;
 
+    @Field(name = "product_name")
     private String name;
 
+    @Field(name = "product_description")
     private String description;
 
     @Override

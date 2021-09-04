@@ -1,6 +1,12 @@
+<!-- 
+class: invert
+paginate: true
+footer: 2021 © Bhuwan Prasad Updhyay [https://bhuwanupadhyay.github.io/]
+-->
+
 # How to Sync data between PostgreSQL and Elasticsearch?
 
-Marpit is the skinny framework for creating slide deck from Markdown.
+Sometimes its very necessary to provide faster result to client through APIs.
 
 ---
 

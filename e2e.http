@@ -8,6 +8,6 @@ Accept: application/json
   "description": "Product description"
 }
 
-### Get products
-GET http://localhost:8081/api/products
+### Search products
+GET http://localhost:8082/api/search/products
 Accept: application/json

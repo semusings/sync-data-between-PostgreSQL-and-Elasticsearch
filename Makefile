@@ -1,6 +1,6 @@
 infra: ## Launch
-	mkdir -p build/docker/esdata && \
-	sudo chown -R 1000:root build/docker/esdata && \
+	#mkdir -p build/docker/esdata && \
+#	sudo chown -R 1000:root build/docker/esdata && \
  	docker-compose rm -f -s -v && \
  	docker-compose up -d && \
  	watch "docker ps -a"

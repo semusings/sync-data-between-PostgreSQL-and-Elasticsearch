@@ -1,0 +1,27 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "How to Sync data between PostgreSQL and Elasticsearch?",
+  "scripts": {
+    "build": "marp README.md -o index.html",
+    "start": "marp -s ./",
+    "proxy": "node proxy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhuwanupadhyay/sync-data-between-PostgreSQL-and-Elasticsearch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhuwanupadhyay/sync-data-between-PostgreSQL-and-Elasticsearch/issues"
+  },
+  "homepage": "https://github.com/bhuwanupadhyay/sync-data-between-PostgreSQL-and-Elasticsearch#readme",
+  "dependencies": {
+    "@marp-team/marp-cli": "^1.4.0",
+    "@marp-team/marpit": "^2.1.1",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^2.0.1"
+  }
+}

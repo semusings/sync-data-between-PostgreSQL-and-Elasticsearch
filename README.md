@@ -1,12 +1,9 @@
 # How to Sync data between PostgreSQL and Elasticsearch?
 
+Marpit is the skinny framework for creating slide deck from Markdown.
 
-## Help Guide
+---
 
-1. Launch docker infrastructure
+## Ready to convert into PDF!
 
-```
-make infra
-```
-
-2. 
+You can convert into PDF slide deck through Chrome.

@@ -1,15 +1,29 @@
 <!-- 
-class: invert
+theme: gaia
 paginate: true
-footer: 2021 © Bhuwan Prasad Updhyay [https://bhuwanupadhyay.github.io/]
+footer: © Bhuwan Prasad Updhyay [https://bhuwanupadhyay.github.io/]
 -->
 
 # How to Sync data between PostgreSQL and Elasticsearch?
 
-Sometimes its very necessary to provide faster result to client through APIs.
+**Tags:**
+
+- PostgreSQL
+- Elasticsearch
+- PGSync
+- Spring Boot
+- Spring Data REST
 
 ---
 
-## Ready to convert into PDF!
+## Background
 
-You can convert into PDF slide deck through Chrome.
+
+---
+
+## System Design
+
+
+---
+
+## Schema Design

@@ -4,7 +4,7 @@
   "description": "How to Sync data between PostgreSQL and Elasticsearch?",
   "scripts": {
     "build": "marp README.md -o public/index.html",
-    "start": "marp -s ./",
+    "start": "marp -w README.md -o public/index.html",
     "proxy": "node proxy.js"
   },
   "repository": {

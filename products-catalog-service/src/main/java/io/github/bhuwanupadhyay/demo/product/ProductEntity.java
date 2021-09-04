@@ -1,29 +1,27 @@
-package io.github.bhuwanupadhyay.demo.entities;
+package io.github.bhuwanupadhyay.demo.product;
 
+
+import io.github.bhuwanupadhyay.demo.core.Auditable;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Objects;
+import java.util.*;
 
-@Entity(name = "categories")
-@Table(name = "categories")
+@Table(name = "products")
+@Entity(name = "products")
 @Access(AccessType.FIELD)
-public class CategoryEntity implements Serializable {
+public class ProductEntity extends Auditable<String> implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "category_id")
+    @Column(name = "product_id")
     private Long id;
 
-    @Column(name = "category_name")
+    @Column(name = "product_name")
     private String name;
 
-    @Column(name = "category_description")
+    @Column(name = "product_description")
     private String description;
-
-    @ManyToOne
-    @JoinColumn(name = "product_id")
-    private ProductEntity product;
 
     public Long getId() {
         return id;
@@ -49,19 +47,11 @@ public class CategoryEntity implements Serializable {
         this.description = description;
     }
 
-    public void setProduct(ProductEntity product) {
-        this.product = product;
-    }
-
-    public ProductEntity getProduct() {
-        return product;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CategoryEntity that = (CategoryEntity) o;
+        ProductEntity that = (ProductEntity) o;
         return Objects.equals(id, that.id);
     }
 
@@ -72,7 +62,7 @@ public class CategoryEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "CategoryEntity{" +
+        return "ProductEntity{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +

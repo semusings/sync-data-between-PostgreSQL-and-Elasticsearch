@@ -1,15 +1,3 @@
-### Create category
-POST http://localhost:8081/api/categories
-Content-Type: application/json
-Accept: application/json
-
-{
-  "name": "Category name",
-  "description": "Category description"
-}
-
-> {% client.global.set("category_link", response.body._links.self.href); %}
-
 ### Create product
 POST http://localhost:8081/api/products
 Content-Type: application/json
@@ -20,23 +8,6 @@ Accept: application/json
   "description": "Product description"
 }
 
-> {% client.global.set("association_url", response.body._links.self.href); %}
-
-
-### Associate the category with the product
-PUT {{association_url}}
-Content-Type: text/uri-list
-
-{{category_link}}
-
-### Get categories
-GET http://localhost:8081/api/categories
-Accept: application/json
-
 ### Get products
 GET http://localhost:8081/api/products
-Accept: application/json
-
-### Get the category with the products
-GET {{product_categories_link}}
 Accept: application/json

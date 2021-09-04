@@ -1,6 +1,5 @@
-package io.github.bhuwanupadhyay.demo.repositories;
+package io.github.bhuwanupadhyay.demo.product;
 
-import io.github.bhuwanupadhyay.demo.entities.ProductEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

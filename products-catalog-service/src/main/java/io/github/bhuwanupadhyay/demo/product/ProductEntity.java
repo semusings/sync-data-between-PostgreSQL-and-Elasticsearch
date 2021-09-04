@@ -1,12 +1,15 @@
 package io.github.bhuwanupadhyay.demo.product;
 
 
-import io.github.bhuwanupadhyay.demo.core.Auditable;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
 
+@Getter
+@Setter
 @Table(name = "products")
 @Entity(name = "products")
 @Access(AccessType.FIELD)
@@ -22,30 +25,6 @@ public class ProductEntity extends Auditable<String> implements Serializable {
 
     @Column(name = "product_description")
     private String description;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     @Override
     public boolean equals(Object o) {

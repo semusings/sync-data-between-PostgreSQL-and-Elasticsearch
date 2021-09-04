@@ -1,6 +1,6 @@
 [
   {
-    "path": "/api/v1/products",
+    "path": "/api/products",
     "target": "http://localhost:8081"
   },
   {

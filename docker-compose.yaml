@@ -1,6 +1,6 @@
 version: "3.3"
 services:
-  postgres:
+  postgresql:
     image: postgres:12.1-alpine
     restart: always
     environment:
@@ -10,6 +10,7 @@ services:
 #      - ./build/docker/pgdata:/var/lib/postgresql/data
     ports:
       - 5432:5432
+    command: [ "postgres", "-c", "wal_level=logical" ]
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U postgres" ]
       start_period: 10s
@@ -39,12 +40,12 @@ services:
       - net.ipv4.tcp_keepalive_intvl=200
       - net.ipv4.tcp_keepalive_probes=5
     links:
-      - postgres
+      - postgresql
       - elasticsearch
       - redis
     environment:
       PG_USER: postgres
-      PG_HOST: postgres
+      PG_HOST: postgresql
       PG_PASSWORD: postgres
       POSTGRES_PORT: 5432
       LOG_LEVEL: INFO

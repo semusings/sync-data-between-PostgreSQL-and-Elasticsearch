@@ -44,14 +44,14 @@ services:
       - elasticsearch
       - redis
     environment:
-      PG_USER: postgres
       PG_HOST: postgresql
-      PG_PASSWORD: postgres
       POSTGRES_PORT: 5432
+      PG_USER: postgres
+      PG_PASSWORD: postgres
       LOG_LEVEL: INFO
+      ELASTICSEARCH_HOST: elasticsearch
       ELASTICSEARCH_PORT: 9200
       ELASTICSEARCH_SCHEME: http
-      ELASTICSEARCH_HOST: elasticsearch
       REDIS_HOST: redis
       REDIS_PORT: 6379
       REDIS_AUTH: redis

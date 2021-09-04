@@ -4,10 +4,9 @@ services:
     image: postgres:12.1-alpine
     restart: always
     environment:
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: root_please_change_me
     volumes:
       - ./docker/postgres:/docker-entrypoint-initdb.d
-#      - ./build/docker/pgdata:/var/lib/postgresql/data
     ports:
       - 5432:5432
     command: [ "postgres", "-c", "wal_level=logical" ]
@@ -23,8 +22,6 @@ services:
       - http.host=0.0.0.0
     ports:
       - 9200:9200
-#    volumes:
-#      - ./build/docker/esdata:/usr/share/elasticsearch/data
   redis:
     image: redis:alpine3.14
     command: redis-server --requirepass redis
@@ -47,7 +44,7 @@ services:
       PG_HOST: postgresql
       POSTGRES_PORT: 5432
       PG_USER: postgres
-      PG_PASSWORD: postgres
+      PG_PASSWORD: root_please_change_me
       LOG_LEVEL: INFO
       ELASTICSEARCH_HOST: elasticsearch
       ELASTICSEARCH_PORT: 9200

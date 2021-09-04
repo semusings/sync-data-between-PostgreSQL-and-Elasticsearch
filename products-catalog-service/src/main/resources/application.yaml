@@ -5,3 +5,13 @@ spring:
   data:
     rest:
       base-path: /api
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/products_db
+    username: service_user
+    password: please_change_me
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQL9Dialect

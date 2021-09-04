@@ -30,11 +30,11 @@ footer: © Bhuwan Prasad Updhyay [https://bhuwanupadhyay.github.io/]
 
 ---
 
-## Product Service
+## PostgreSQL => Product Service
 
 ---
 
-## Product Search Service
+## Elasticsearch => Product Search Service
 
 ---
 

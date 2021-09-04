@@ -20,15 +20,14 @@ Accept: application/json
   "description": "Product description"
 }
 
-> {% client.global.set("product_categories_link", response.body._links.self.href); %}
+> {% client.global.set("association_url", response.body._links.self.href); %}
 
 
 ### Associate the category with the product
-PUT {{category_link}}
+PUT {{association_url}}
 Content-Type: text/uri-list
-Accept: application/json
 
-{{product_categories_link}}
+{{category_link}}
 
 ### Get categories
 GET http://localhost:8081/api/categories

@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @ControllerAdvice
-public class RestExceptionHandlerConfiguration extends ResponseEntityExceptionHandler {
+public class ExceptionHandlerConfiguration extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(TransactionSystemException.class)
     protected ResponseEntity<List<String>> handleTransactionException(TransactionSystemException ex) throws Throwable {

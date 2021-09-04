@@ -8,8 +8,8 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/products_db
-    username: service_user
-    password: please_change_me
+    username: postgres
+    password: root_please_change_me
   jpa:
     hibernate:
       ddl-auto: update

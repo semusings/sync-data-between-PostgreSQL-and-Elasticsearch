@@ -10,6 +10,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.Date;
 
 
 @Getter
@@ -25,7 +26,7 @@ public abstract class Auditable {
 
     @CreatedDate
     @Column(name = "created_date")
-    private Instant createdDate;
+    private Date createdDate;
 
     @LastModifiedBy
     @Column(name = "last_modified_by")
@@ -33,6 +34,6 @@ public abstract class Auditable {
 
     @LastModifiedDate
     @Column(name = "last_modified_date")
-    private Instant lastModifiedDate;
+    private Date lastModifiedDate;
 
 }

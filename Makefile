@@ -1,5 +1,5 @@
 dbs: ## dbs
-	docker-compose up -d postgresql elasticsearch
+	docker-compose up -d postgresql elasticsearch redis
 
 pgsync: ## pgsync
-	docker-compose up -d redis pgsync
+	docker-compose up pgsync

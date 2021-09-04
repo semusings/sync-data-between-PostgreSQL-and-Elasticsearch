@@ -6,7 +6,7 @@ import org.springframework.data.elasticsearch.annotations.DateFormat;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
-import java.time.Instant;
+import java.util.Date;
 
 
 @Getter
@@ -17,12 +17,12 @@ public abstract class Auditable {
     private String createdBy;
 
     @Field(name = "created_date", type = FieldType.Date, format = DateFormat.date_time)
-    private Instant createdDate;
+    private Date createdDate;
 
     @Field(name = "last_modified_by")
     private String lastModifiedBy;
 
     @Field(name = "last_modified_date", type = FieldType.Date, format = DateFormat.date_time)
-    private Instant lastModifiedDate;
+    private Date lastModifiedDate;
 
 }

@@ -5,9 +5,6 @@ infra: ## Launch
  	docker-compose up -d && \
  	watch "docker ps -a"
 
-proxy: ## Local Proxy
-	npm i express http-proxy-middleware && node proxy.js
-
 clean: ## Cleanup
 	docker-compose rm -f -s -v && \
 	rm -rf node_modules/ package-lock.json && \

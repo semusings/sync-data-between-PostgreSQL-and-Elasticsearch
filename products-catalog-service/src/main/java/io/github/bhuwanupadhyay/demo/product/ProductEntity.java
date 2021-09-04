@@ -13,7 +13,7 @@ import java.util.*;
 @Table(name = "products")
 @Entity(name = "products")
 @Access(AccessType.FIELD)
-public class ProductEntity extends Auditable<String> implements Serializable {
+public class ProductEntity extends Auditable implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

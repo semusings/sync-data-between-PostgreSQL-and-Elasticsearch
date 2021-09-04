@@ -12,7 +12,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @Document(indexName = "products")
-public class ProductSearchEntity extends Auditable<String> implements Serializable {
+public class ProductSearchEntity extends Auditable implements Serializable {
 
     @Id
     @Field(name = "product_id")

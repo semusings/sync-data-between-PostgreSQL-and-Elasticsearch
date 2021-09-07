@@ -18,6 +18,6 @@ public class JpaAuditingConfiguration {
           If you are using spring security, you can get the currently logged username with following code segment.
           SecurityContextHolder.getContext().getAuthentication().getName()
          */
-        return () -> Optional.of("demo");
+        return () -> Optional.of("bot-user");
     }
 }

@@ -18,10 +18,14 @@ Accept: application/json
   "description": "Description"
 }
 
+### List products
+GET http://localhost:8082/api/es/products
+Accept: application/json
+
 ### Search product1
-GET http://localhost:8082/api/es/products/search/
+GET http://localhost:8082/api/es/products/search/findByNameLike/?name=product1
 Accept: application/json
 
 ### Search product2
-GET http://localhost:8082/api/es/products
+GET http://localhost:8082/api/es/products/search/findByNameLike/?name=product2
 Accept: application/json

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "How to Sync data between PostgreSQL and Elasticsearch?",
   "scripts": {
-    "assets": "cp -r system-design.png ./public/",
+    "assets": "mkdirp ./public/ && cp -r system-design.png ./public/",
     "build_page": "marp README.md -o ./public/index.html",
     "build": "run-s assets build_page",
     "watch": "marp -w README.md -o ./public/index.html",

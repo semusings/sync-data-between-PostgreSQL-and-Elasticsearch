@@ -30,7 +30,7 @@ footer: © Bhuwan Prasad Updhyay [https://bhuwanupadhyay.github.io/]
 
 ---
 
-## PostgreSQL => Product Service
+## PostgreSQL => Product Catalog Service
 
 ---
 

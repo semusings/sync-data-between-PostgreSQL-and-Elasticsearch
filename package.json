@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "How to Sync data between PostgreSQL and Elasticsearch?",
   "scripts": {
-    "build": "marp README.md -o ./public/index.html",
+    "assets": "cp -r system-design.png ./public/",
+    "build_page": "marp README.md -o ./public/index.html",
+    "build": "run-s assets build_page",
     "watch": "marp -w README.md -o ./public/index.html",
     "serve": "http-server ./public",
-    "start": "run-p watch serve",
+    "start": "run-p assets watch serve",
     "proxy": "node proxy.js"
   },
   "repository": {

@@ -1,6 +1,5 @@
 FROM python:3.7
-RUN pip install pgsync
-
+RUN pip install pgsync==2.1.1
 ARG WORKDIR=/pgync
 RUN mkdir $WORKDIR
 ADD ./configs/ $WORKDIR/configs

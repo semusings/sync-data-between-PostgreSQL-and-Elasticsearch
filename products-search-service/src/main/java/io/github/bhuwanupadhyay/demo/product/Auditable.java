@@ -16,13 +16,13 @@ public abstract class Auditable {
     @Field(name = "created_by")
     private String createdBy;
 
-    @Field(name = "created_date", type = FieldType.Date, format = DateFormat.date_time)
+    @Field(name = "created_date", type = FieldType.Date, pattern = {"uuuu-MM-dd'T'HH:mm:ss.SSS", "uuuu-MM-dd'T'HH:mm:ss.SS", "uuuu-MM-dd'T'HH:mm:ss.S"})
     private Date createdDate;
 
     @Field(name = "last_modified_by")
     private String lastModifiedBy;
 
-    @Field(name = "last_modified_date", type = FieldType.Date, format = DateFormat.date_time)
+    @Field(name = "last_modified_date", type = FieldType.Date, pattern = {"uuuu-MM-dd'T'HH:mm:ss.SSS", "uuuu-MM-dd'T'HH:mm:ss.SS", "uuuu-MM-dd'T'HH:mm:ss.S"})
     private Date lastModifiedDate;
 
 }

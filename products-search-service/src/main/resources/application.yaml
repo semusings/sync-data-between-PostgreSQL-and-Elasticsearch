@@ -4,4 +4,4 @@ server:
 spring:
   data:
     rest:
-      base-path: /api/search
+      base-path: /api/es

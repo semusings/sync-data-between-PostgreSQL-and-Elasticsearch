@@ -1,13 +1,27 @@
-### Create product
+### Create product1
 POST http://localhost:8081/api/products
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Product name",
-  "description": "Product description"
+  "name": "product1",
+  "description": "Description"
 }
 
-### Search products
-GET http://localhost:8082/api/search/products
+### Create product2
+POST http://localhost:8081/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "product2",
+  "description": "Description"
+}
+
+### Search product1
+GET http://localhost:8082/api/es/products/search/
+Accept: application/json
+
+### Search product2
+GET http://localhost:8082/api/es/products
 Accept: application/json

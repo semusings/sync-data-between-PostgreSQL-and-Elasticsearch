@@ -41,3 +41,9 @@ footer: © Bhuwan Prasad Updhyay [https://bhuwanupadhyay.github.io/]
 ## Conclusion
 
 As 
+
+---
+
+### References
+
+- https://pgsync.com/env-vars/

@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.8"
 services:
   postgresql:
     image: postgres:12.1-alpine
@@ -12,11 +12,18 @@ services:
       test: [ "CMD-SHELL", "pg_isready -U postgres" ]
   elasticsearch:
     image: elasticsearch:7.12.1
+    deploy:
+      resources:
+        limits:
+          memory: 1g
+        reservations:
+          memory: 1g
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=false
       - network.host=127.0.0.1
       - http.host=0.0.0.0
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
     ports:
       - "9200:9200"
   redis:
